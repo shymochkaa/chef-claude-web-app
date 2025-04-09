@@ -3,7 +3,7 @@ export default function Main() {
     
     
     const listOfIngredients = ingredients.map((ingredient) => {
-        return <li>{ingredient}</li>
+        return <li key={ingredient}>{ingredient}</li>
     } )
 
     return(
