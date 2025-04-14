@@ -30,6 +30,8 @@ nav > a {
     font-size: 2rem;
 }
 
+
+
 form {
     margin: 4.125em auto 0;
     width: fit-content;
@@ -60,4 +62,9 @@ form > button {
 form > button::before {
     content: "+";
     margin-right: .3em;
+}
+
+
+ul {
+    margin: 1em 2em;
 }
