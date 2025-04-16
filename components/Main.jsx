@@ -18,15 +18,27 @@ export default function Main() {
 
     return(
         <main>
-            <form action={addIngredient} id="form">
-            <input type="text" placeholder="e.g. oregano" aria-label='Type ingredient' name="ingredient" />
+        <form action={addIngredient} className="add-ingredient-form">
+            <input
+                type="text"
+                placeholder="e.g. oregano"
+                aria-label="Add ingredient"
+                name="ingredient"
+            />
             <button>Add ingredient</button>
-       </form>
-        <ul>
-            {listOfIngredients}
-        </ul>
-
-        </main>
+        </form>
+        {ingredients.length > 0 && <section>
+            <h2>Ingredients on hand:</h2>
+            <ul className="ingredients-list" aria-live="polite">{listOfIngredients}</ul>
+            {ingredients.length > 3 && <div className="get-recipe-container">
+                <div>
+                    <h3>Ready for a recipe?</h3>
+                    <p>Generate a recipe from your list of ingredients.</p>
+                </div>
+                <button>Get a recipe</button>
+            </div>}
+        </section>}
+    </main>
        
     )
    
